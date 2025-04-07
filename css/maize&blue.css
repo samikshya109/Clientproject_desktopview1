@@ -1,0 +1,248 @@
+
+:root {
+    --umich-blue: #00274C;
+    --umich-maize: #FFCB05;
+    --white: #FFFFFF;
+    --gray: #E5E5E5;
+    --dark-gray: #333;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--umich-blue);
+    color: var(--white);
+    padding: 1rem;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+header img {
+    max-width: 150px;
+    display: block;
+    margin: 0 0 1rem 0;
+}
+
+/* Skip link styles */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: -999px;
+    background: #004165;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 100;
+    text-align: center;
+    transition: top 0.3s ease-in-out; /* Smooth appearance */
+}
+
+.skip-link:focus {
+    left: 0;
+    top: 0;
+}
+
+/* ===== Navigation Styles ===== */
+nav {
+    display: grid;
+    top: 0;
+    right: 0;
+    background-color: var(--umich-blue);
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0.5rem 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--umich-blue);
+    background-color: var(--white);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--umich-blue);
+    color: var(--white);
+}
+
+nav ul li a.active {
+    background-color: var(--umich-blue);
+    color: var(--white);
+}
+
+/* Responsive nav layout */
+@media (min-width: 900px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+}
+
+
+
+main {
+    display: block;
+    padding: 1rem;
+    text-align: left; 
+}
+
+main h1 {
+    color: var(--umich-blue);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    padding-left: 2rem;
+}
+
+main h2 {
+    color: var(--umich-blue);
+    font-size: 1.5rem;
+    padding-left: 2rem;
+}
+
+main h2.our-mission {
+    color: var(--umich-maize);
+}
+
+main p {
+    font-size: 1.1rem;
+    max-width: 90%;
+    padding-left: 2rem;
+}
+
+
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+    width: 400px;
+    padding-left: 2rem;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+
+ul {
+    padding: 0;
+}
+
+.what-we-do {
+    display: flex;
+    justify-content: space-between; /* Distribute items with equal space between them */
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    gap: 1rem; /* Space between items */
+}
+
+.what-we-do li {
+    flex: 1 1 23%; /* Each item will take 23% of the container width */
+    text-align: center; /* Center the text under each image */
+    box-sizing: border-box; /* Prevent overflow issues */
+}
+
+.what-we-do img {
+    max-width: 70%; /* Ensure the images scale correctly within their containers */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Round the corners of the images */
+    align-content: center;
+}
+
+.what-we-do h2 {
+    font-size: 1.2rem;
+    color: #00274C; /* Example color */
+    margin-top: 1rem;
+}
+
+.what-we-do p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+
+ul li {
+    list-style: none;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+/* Improved text contrast on gray background 
+ul li {
+    list-style: none;
+    padding: 1rem;
+    background: var(--gray);
+    color: var(--dark-gray);
+    margin: 1rem 0;
+    border-radius: 8px;
+}*/
+
+footer {
+    background: var(--umich-blue);
+    color: var(--white);
+    text-align: left; 
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--umich-maize);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (min-width: 900px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
